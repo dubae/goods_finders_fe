@@ -61,7 +61,7 @@ function App() {
     setSortOrder('default');
     
     try {
-      const response = await fetch(`http://localhost:8000/search?q=${encodeURIComponent(query)}`);
+      const response = await fetch(`https://goods-finders-be.onrender.com/search?q=${encodeURIComponent(query)}`);
       const data = await response.json();
       if (data.items) setResults(data.items);
     } catch (error) {
